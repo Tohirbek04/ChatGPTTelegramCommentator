@@ -15,7 +15,7 @@ class Telegram_Commentator:
         self.api_hash: str = os.getenv('Api_hash')
         self.owner_ID: str = os.getenv('Owner_id')
         self.client = None
-        self.your_site_url = "https://your-site-url.com"  # Замените на URL вашего сайта
+        self.your_site_url = "https://kun.uz/"  # Замените на URL вашего сайта
         self.your_site_name = "Your Site Name"  # Замените на название вашего сайта
 
     def start_telegram_client(self):
@@ -35,11 +35,11 @@ class Telegram_Commentator:
             "messages": [
                 {
                     "role": "system",
-                    "content": "Вы патриот России и девушка. Пишите осмысленные человекоподобные яркие комментарии до 11 слов."
+                    "content": "aaaa"
                 },
                 {
                     "role": "user",
-                    "content": f"Напишите комментарий к этому посту: {post_text}"
+                    "content": f"sdc {post_text}"
                 }
             ]
         }
@@ -54,7 +54,7 @@ class Telegram_Commentator:
                 return "Даже не знаю, что тут сказать...."
         except Exception as e:
             print(f"Ошибка при генерации комментария: {e}")
-            return "Даже не знаю, что тут сказать...."
+            return "aaaaaa"
 
     def write_comments_in_telegram(self):
         last_message_ids = {name: 0 for name in self.channels}
